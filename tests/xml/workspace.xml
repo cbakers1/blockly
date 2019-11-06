@@ -1,0 +1,114 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+   <variables>
+      <variable id="4zqCO]S-jo+2^`maCt|K">x</variable>
+      <variable id="K/cNaUs{[7ol-9}CP7RL">i</variable>
+      <variable id="8ZxN/~:DTP3pX4eGrv2b">text</variable>
+   </variables>
+   <comment id="TUkxWVwnVb;#]^MfteT4" x="0" y="0" h="100" w="100">This is a workspace comment.
+      This is a new line on the workspace comment.
+   </comment>
+   <block id="(i!.lvB^fBr,}8Lf_,9J" type="procedures_defnoreturn" x="113" y="238">
+      <mutation>
+         <arg name="x" varid="4zqCO]S-jo+2^`maCt|K" />
+         <arg name="i" varid="K/cNaUs{[7ol-9}CP7RL" />
+      </mutation>
+      <field name="NAME">bar</field>
+      <comment pinned="false" h="80" w="160">Describe this function...</comment>
+      <statement name="STACK">
+         <block id="K|8!{v)9/^^1=2GzXe[_" type="controls_if">
+            <mutation elseif="1" else="1" />
+            <value name="IF0">
+               <block id="#N?|av?JV]CnUOitJ4n$" type="logic_compare">
+                  <field name="OP">LT</field>
+                  <value name="A">
+                     <block id="w,45*W^AcPera3-.x*wl" type="text_getSubstring" inline="false">
+                        <mutation at1="false" at2="true" />
+                        <field name="WHERE1">FIRST</field>
+                        <field name="WHERE2">FROM_START</field>
+                        <value name="STRING">
+                           <block id="oF,qA%c[v(h6/iLJJ0Zn" type="variables_get">
+                              <field id="8ZxN/~:DTP3pX4eGrv2b" name="VAR">text</field>
+                           </block>
+                        </value>
+                     </block>
+                  </value>
+                  <value name="B">
+                     <block id="I@|f@k!fgu4yqO{s]3-W" type="text_join">
+                        <mutation items="3" />
+                     </block>
+                  </value>
+               </block>
+            </value>
+            <value name="IF1">
+               <block id="P;p2LLz;hjJ@RE?:TVHc" type="procedures_callreturn">
+                  <mutation name="foo" />
+               </block>
+            </value>
+            <statement name="DO1">
+               <block id="1~S=odLNrF|T(O.|Z2Gn" type="text_print">
+                  <value name="TEXT">
+                     <shadow id="|KS=0M,=!+@H1V/cuHSW" type="text">
+                        <field name="TEXT">&lt;html&gt;</field>
+                     </shadow>
+                  </value>
+               </block>
+            </statement>
+            <statement name="ELSE">
+               <block id="KiMt-oQI`=,FYKY5ZK=:" type="math_change">
+                  <field id="K/cNaUs{[7ol-9}CP7RL" name="VAR">i</field>
+                  <value name="DELTA">
+                     <shadow id="-O]V4./`ipovlf]!:v![" type="math_number">
+                        <field name="NUM">1</field>
+                     </shadow>
+                  </value>
+               </block>
+            </statement>
+         </block>
+      </statement>
+   </block>
+   <block id="VhRm*A*n,#pZJdysUqQh" type="logic_ternary" x="537" y="462" />
+   <block id="lpPefvcBM.yRI=OpBQ?A" type="procedures_defreturn" x="213" y="637">
+      <field name="NAME">foo</field>
+      <comment pinned="false" h="80" w="160">This function does...
+
+         ...nothing!
+      </comment>
+      <statement name="STACK">
+         <block id="?{hnO}N?G,L*XBAno{w6" type="procedures_ifreturn">
+            <mutation value="1" />
+            <value name="CONDITION">
+               <block id="jd[*W1IM5BX?g%BO+e;L" type="logic_boolean">
+                  <field name="BOOL">TRUE</field>
+               </block>
+            </value>
+            <value name="VALUE">
+               <block id="|$B_?vvc2K?w89t!P,U8" type="colour_rgb">
+                  <value name="RED">
+                     <shadow id="z}r5j$awNvVsBvyF50Ly" type="math_number">
+                        <field name="NUM">100</field>
+                     </shadow>
+                  </value>
+                  <value name="GREEN">
+                     <shadow id="4%j`]!d#xCkG[_*p,7H2" type="math_number">
+                        <field name="NUM">50</field>
+                     </shadow>
+                  </value>
+                  <value name="BLUE">
+                     <shadow id="~j/fzD+7+hB$6K[}#Ak/" type="math_number">
+                        <field name="NUM">0</field>
+                     </shadow>
+                  </value>
+               </block>
+            </value>
+            <next>
+               <block id="~3R~eK(7]~pbGFW$Idc-" type="procedures_callnoreturn">
+                  <mutation name="bar">
+                     <arg name="x" />
+                     <arg name="i" />
+                  </mutation>
+               </block>
+            </next>
+         </block>
+      </statement>
+   </block>
+</xml>
